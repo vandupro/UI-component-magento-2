@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add 
+            id="AHT_Pike::menu_id" 
+            title="Post" 
+            module="AHT_Pike" 
+            sortOrder="100" 
+            resource="AHT_Pike::menu_id"
+        />
+        <add
+            id="AHT_Pike::post"
+            title="All Posts"
+            module="AHT_Pike"
+            sortOrder="10"
+            parent="AHT_Pike::menu_id"
+            action="pike/post/index"
+            resource="AHT_Pike::post"
+        />
+    </menu>
+</config>

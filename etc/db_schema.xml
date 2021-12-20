@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="pike" resource="default" engine="innodb" comment="Table comment">
+        <column xsi:type="int" name="pike_id" padding="11" unsigned="false" nullable="false" identity="true" comment=""/>
+        <column xsi:type="varchar" name="name"  nullable="false" default="default name" comment=""/>
+        <column xsi:type="varchar" name="content"  nullable="false" default="default content" comment=""/>
+        <column xsi:type="timestamp" name="created_at"  nullable="false" default="CURRENT_TIMESTAMP" comment=""/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="pike_id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="REFERENCE_ID">
+            <column name="pike_id"/>
+            <column name="name"/>
+        </constraint>
+        <!-- <index referenceId="INDEX_REFERENCE_ID" indexType="btree">
+            <column name="another_column"/>
+        </index> -->
+    </table>
+</schema>
